@@ -1,13 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MovementController : MonoBehaviour {
 
+    [Header("Gameplay Settings")]
+    [Tooltip("How fast can player move.")]
     [SerializeField] private float movementSpeed;
 
-    private Vector2 movement;
+    [Header("Boundary Settings")]
+    [Tooltip("How far forward can player move.")]
+    [SerializeField] private float forwardDistance;
+    [Range(0, 1)]
+    [Tooltip("Padding on the edge of the screen on both sides.")]
+    [SerializeField] private float padding;
 
+    private Vector2 movement;
+    private float minX, maxX;
+
+
+    private void Start() {
+        GetEdges();
+    }
 
     private void Update() {
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -22,9 +34,19 @@ public class MovementController : MonoBehaviour {
 
         transform.Translate(movement);
 
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2f, 2f),
-                                         Mathf.Clamp(transform.position.y, 0f, 2f),
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX),
+                                         Mathf.Clamp(transform.position.y, 0f, forwardDistance),
                                          transform.position.z); 
+    }
+
+    private void GetEdges() {
+        float distance = transform.position.z - Camera.main.transform.position.z;
+
+        Vector3 leftEdge = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, distance));
+        Vector3 rightEdge = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0f, distance));
+
+        minX = leftEdge.x + padding;
+        maxX = rightEdge.x - padding;
     }
 
 }
