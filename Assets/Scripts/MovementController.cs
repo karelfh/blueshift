@@ -14,11 +14,11 @@ public class MovementController : MonoBehaviour {
     [SerializeField] private float padding;
 
     private Vector2 movement;
-    private float minX, maxX;
+    private float minX, maxX, distanceFromCam;
 
 
     private void Start() {
-        GetEdges();
+        distanceFromCam = transform.position.z - Camera.main.transform.position.z;
     }
 
     private void Update() {
@@ -29,6 +29,8 @@ public class MovementController : MonoBehaviour {
     }
 
     private void Move(float horizontalAxis, float verticalAxis) {
+        GetEdges();
+
         movement.Set(horizontalAxis, verticalAxis);
         movement = movement.normalized * movementSpeed * Time.deltaTime;
 
@@ -40,10 +42,8 @@ public class MovementController : MonoBehaviour {
     }
 
     private void GetEdges() {
-        float distance = transform.position.z - Camera.main.transform.position.z;
-
-        Vector3 leftEdge = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, distance));
-        Vector3 rightEdge = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0f, distance));
+        Vector3 leftEdge = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, distanceFromCam));
+        Vector3 rightEdge = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0f, distanceFromCam));
 
         minX = leftEdge.x + padding;
         maxX = rightEdge.x - padding;
