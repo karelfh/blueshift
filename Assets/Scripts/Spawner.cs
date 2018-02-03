@@ -9,6 +9,7 @@ public class Spawner : MonoBehaviour {
 
     private ObjectPooler objectPooler;
 
+
     private void Start() {
         objectPooler = GetComponent<ObjectPooler>();
 
@@ -18,8 +19,8 @@ public class Spawner : MonoBehaviour {
     private IEnumerator Spawn() {
         while (true) {
             Vector3 spawnPosition = new Vector3(Random.Range(-spawnValue, spawnValue),
-                                            transform.position.y,
-                                            transform.position.z);
+                                                transform.position.y,
+                                                transform.position.z);
 
             GameObject obj = objectPooler.GetPooledObject();
 

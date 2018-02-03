@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnValue: 5
-  spawnTime: 0.5
+  spawnDelay: 0.5
 --- !u!4 &952196294
 Transform:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &952196295
 MonoBehaviour:
@@ -266,7 +266,9 @@ MonoBehaviour:
   objectsToPool:
   - {fileID: 1600094303185604, guid: dc3a7ec816334de428ccc9ea36c264ad, type: 2}
   - {fileID: 1583940131494936, guid: 043bbe0cc7cecac49b656ecbb40257c0, type: 2}
-  pooledAmount: 5
+  - {fileID: 1515305870753562, guid: 994b06fc181195048809a8d5f67af83f, type: 2}
+  - {fileID: 1046648013768074, guid: 0accabb387316ed4bbe1e229a3ace998, type: 2}
+  pooledAmount: 10
   willGrow: 1
   pooledObjects: []
 --- !u!1 &1399802762
@@ -297,7 +299,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1399802764
 BoxCollider2D:
@@ -437,7 +439,7 @@ Transform:
   m_Children:
   - {fileID: 1495561078}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2032593680
 MonoBehaviour:
@@ -450,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ba609ba9a793742a2ce1de97679476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 4
   forwardDistance: 2
   padding: 0.75
 --- !u!60 &2032593681

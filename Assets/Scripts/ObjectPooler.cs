@@ -7,7 +7,7 @@ public class ObjectPooler : MonoBehaviour {
     [SerializeField] private int pooledAmount;
     [SerializeField] private bool willGrow;
 
-    public List<GameObject> pooledObjects;
+    [HideInInspector] public List<GameObject> pooledObjects;
 
 
     private void Start() {
