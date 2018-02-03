@@ -4,7 +4,7 @@ public class MovementController : MonoBehaviour {
 
     [Header("Gameplay Settings")]
     [Tooltip("How fast can player move.")]
-    [SerializeField] private float movementSpeed;
+    [SerializeField] private FloatReferece movementSpeed;
 
     [Header("Boundary Settings")]
     [Tooltip("How far forward can player move.")]
@@ -32,7 +32,7 @@ public class MovementController : MonoBehaviour {
         GetEdges();
 
         movement.Set(horizontalAxis, verticalAxis);
-        movement = movement.normalized * movementSpeed * Time.deltaTime;
+        movement = movement.normalized * movementSpeed.Value * Time.deltaTime;
 
         transform.Translate(movement);
 

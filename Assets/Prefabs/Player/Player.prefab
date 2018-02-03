@@ -140,7 +140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ba609ba9a793742a2ce1de97679476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 4
+  movementSpeed:
+    useConstant: 0
+    constantValue: 0
+    variable: {fileID: 11400000, guid: a58d01b81e72e744fbba70b4a402f1ed, type: 2}
   forwardDistance: 5
   padding: 0.75
 --- !u!114 &114176273472171178
