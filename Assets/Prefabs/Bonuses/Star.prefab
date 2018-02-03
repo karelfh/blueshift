@@ -26,7 +26,7 @@ GameObject:
   m_Layer: 0
   m_Name: Star
   m_TagString: Star
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -3701561207968579530, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -130,7 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c694baf2d424c044a0ce14bade7b7ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1.5
+  movementSpeed:
+    useConstant: 1
+    constantValue: 2
+    variable: {fileID: 0}
 --- !u!212 &212631440667142922
 SpriteRenderer:
   m_ObjectHideFlags: 1
