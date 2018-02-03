@@ -1,33 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(ObjectPooler))]
 public class Spawner : MonoBehaviour {
 
     [SerializeField] private float spawnValue;
-    [SerializeField] private GameObject[] objects;
+    [SerializeField] private float spawnTime;
 
-
+    private ObjectPooler objectPooler;
+    
     private void Start() {
-        Spawn();
+        objectPooler = GetComponent<ObjectPooler>();
+
+        InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
 
-    private IEnumerator Spawn() {
-        // Start Delay
-        yield return new WaitForSeconds(1f);
+    private void Spawn() {
+        Vector3 spawnPosition = new Vector3(Random.Range(-spawnValue, spawnValue),
+                                            transform.position.y,
+                                            transform.position.z);
 
-        while (true) {
-            Vector3 spawnPosition = new Vector3(Random.Range(-spawnValue, spawnValue),
-                                                transform.position.y,
-                                                transform.position.z);
+        GameObject obj = objectPooler.GetPooledObject();
 
-            // Spawn
+        if (obj == null) return;
 
-            // Delay after spawning one object
-            yield return new WaitForSeconds(1f);
-        }
+        obj.transform.position = spawnPosition;
+        obj.transform.rotation = transform.rotation;
+        obj.SetActive(true);
     }
 
-    // Show spawner in the scene - remove in final build
+    // Show spawner in the scene
     private void OnDrawGizmos() {
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(transform.position, new Vector3(10, 1, 1));
