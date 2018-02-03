@@ -8,10 +8,9 @@ public class MovementController : MonoBehaviour {
 
     [Header("Boundary Settings")]
     [Tooltip("How far forward can player move.")]
-    [SerializeField] private float forwardDistance;
-    [Range(0, 1)]
+    [SerializeField] private FloatReferece forwardDistance;
     [Tooltip("Padding on the edge of the screen on both sides.")]
-    [SerializeField] private float padding;
+    [SerializeField] private FloatReferece padding;
 
     private Vector2 movement;
     private float minX, maxX, distanceFromCam;
@@ -37,7 +36,7 @@ public class MovementController : MonoBehaviour {
         transform.Translate(movement);
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX),
-                                         Mathf.Clamp(transform.position.y, 0f, forwardDistance),
+                                         Mathf.Clamp(transform.position.y, 0f, forwardDistance.Value),
                                          transform.position.z); 
     }
 
@@ -45,8 +44,8 @@ public class MovementController : MonoBehaviour {
         Vector3 leftEdge = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, distanceFromCam));
         Vector3 rightEdge = Camera.main.ViewportToWorldPoint(new Vector3(1f, 0f, distanceFromCam));
 
-        minX = leftEdge.x + padding;
-        maxX = rightEdge.x - padding;
+        minX = leftEdge.x + padding.Value;
+        maxX = rightEdge.x - padding.Value;
     }
 
 }

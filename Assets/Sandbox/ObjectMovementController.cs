@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(ObjectDestroyController))]
 public class ObjectMovementController : MonoBehaviour {
 
-    [SerializeField] private float movementSpeed;
+    [SerializeField] private FloatReferece movementSpeed;
 
     private Vector2 movement;
 
@@ -16,7 +14,7 @@ public class ObjectMovementController : MonoBehaviour {
 
     private void Move() {
         movement.Set(0, -1);
-        movement = movement.normalized * movementSpeed * Time.deltaTime;
+        movement = movement.normalized * movementSpeed.Value * Time.deltaTime;
 
         transform.Translate(movement);
     }

@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-[System.Serializable]
+﻿[System.Serializable]
 public class FloatReferece {
 
     public bool useConstant;
@@ -9,7 +7,7 @@ public class FloatReferece {
 
     public float Value {
         get { return useConstant ? constantValue :
-                                   variable.value; }
+                                   variable.value;  }
     }
 
 }

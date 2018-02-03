@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-[System.Serializable]
+﻿[System.Serializable]
 public class IntReference {
 
     public bool useConstant;
@@ -8,10 +6,8 @@ public class IntReference {
     public IntVariable variable;
 
     public int Value {
-        get {
-            return useConstant ? constantValue :
-                                 variable.value;
-        }
+        get { return useConstant ? constantValue :
+                                   variable.value;  }
     }
 
 }

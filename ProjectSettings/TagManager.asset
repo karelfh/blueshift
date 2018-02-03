@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Destroyer
   - Spawner
-  - Meteor
   - Star
+  - Meteor
   layers:
   - Default
   - TransparentFX
