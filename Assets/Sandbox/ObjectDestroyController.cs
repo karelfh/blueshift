@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ObjectDestroyController : MonoBehaviour {
 
@@ -11,7 +9,7 @@ public class ObjectDestroyController : MonoBehaviour {
         }
     }
 
-    private void Destroy() {
+    public void Destroy() {
         gameObject.SetActive(false);
     }
 

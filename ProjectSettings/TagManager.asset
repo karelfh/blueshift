@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Destroyer
+  - Spawner
+  - Meteor
+  - Star
   layers:
   - Default
   - TransparentFX
