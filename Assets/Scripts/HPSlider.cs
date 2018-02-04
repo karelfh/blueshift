@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class HPSlider : MonoBehaviour {
 
-    [SerializeField] private FloatReferece playerHealth;
+    [SerializeField] private FloatReference playerHealth;
 
     private Slider hpSlider;
 

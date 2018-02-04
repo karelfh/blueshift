@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed:
-    useConstant: 1
-    constantValue: 1.5
-    variable: {fileID: 0}
+    UseConstant: 1
+    ConstantValue: 1.5
+    Variable: {fileID: 0}
 --- !u!212 &212853571059814010
 SpriteRenderer:
   m_ObjectHideFlags: 1

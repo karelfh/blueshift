@@ -282,7 +282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &438773357
 Transform:
   m_ObjectHideFlags: 0
@@ -467,9 +467,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth:
-    useConstant: 0
-    constantValue: 0
-    variable: {fileID: 11400000, guid: 93cc75b30c84ebf4480c3753c0eef7b9, type: 2}
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 93cc75b30c84ebf4480c3753c0eef7b9, type: 2}
 --- !u!1001 &877475758
 Prefab:
   m_ObjectHideFlags: 0
@@ -622,9 +622,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore:
-    useConstant: 0
-    constantValue: 0
-    variable: {fileID: 11400000, guid: 82c60d7087c0af146a42257e7f88c39e, type: 2}
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
 --- !u!114 &1102836372
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,13 +1,21 @@
 ﻿[System.Serializable]
 public class IntReference {
+    public bool UseConstant = true;
+    public int ConstantValue;
+    public IntReference Variable;
 
-    public bool useConstant;
-    public int constantValue;
-    public IntVariable variable;
+    public IntReference() { }
 
-    public int Value {
-        get { return useConstant ? constantValue :
-                                   variable.value;  }
+    public IntReference(int value) {
+        UseConstant = true;
+        ConstantValue = value;
     }
 
+    public int Value {
+        get { return UseConstant ? ConstantValue : Variable.Value; }
+    }
+
+    public static implicit operator int(IntReference reference) {
+        return reference.Value;
+    }
 }

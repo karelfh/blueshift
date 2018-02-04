@@ -4,13 +4,13 @@ public class MovementController : MonoBehaviour {
 
     [Header("Gameplay Settings")]
     [Tooltip("How fast can player move.")]
-    [SerializeField] private FloatReferece movementSpeed;
+    [SerializeField] private FloatReference movementSpeed;
 
     [Header("Boundary Settings")]
     [Tooltip("How far forward can player move.")]
-    [SerializeField] private FloatReferece forwardDistance;
+    [SerializeField] private FloatReference forwardDistance;
     [Tooltip("Padding on the edge of the screen on both sides.")]
-    [SerializeField] private FloatReferece padding;
+    [SerializeField] private FloatReference padding;
 
     private Vector2 movement;
     private float minX, maxX, distanceFromCam;

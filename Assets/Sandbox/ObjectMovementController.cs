@@ -3,7 +3,7 @@
 [RequireComponent(typeof(ObjectDestroyController))]
 public class ObjectMovementController : MonoBehaviour {
 
-    [SerializeField] private FloatReferece movementSpeed;
+    [SerializeField] private FloatReference movementSpeed;
 
     private Vector2 movement;
 

@@ -4,28 +4,28 @@ public class CollisionController : MonoBehaviour {
 
     [Header("Damage Settings")]
     [SerializeField] private FloatVariable playerHealth;
-    [SerializeField] private FloatReferece meteorDamageSmall;
+    [SerializeField] private FloatReference meteorDamageSmall;
 
     [Header("Score Settings")]
-    [SerializeField] private IntVariable playerScore;
-    [SerializeField] private IntReference starScoreValue;
+    [SerializeField] private FloatVariable playerScore;
+    [SerializeField] private FloatReference starScoreValue;
 
 
     private void OnTriggerEnter2D(Collider2D coll) {
         if (coll.CompareTag("Meteor")) {
             // Destroy meteor, get damage
-            playerHealth.value -= meteorDamageSmall.Value;
+            playerHealth.Value -= meteorDamageSmall.Value;
             coll.GetComponent<ObjectDestroyController>().Destroy();
         }
 
-        if (playerHealth.value <= 0f) {
+        if (playerHealth.Value <= 0f) {
             Debug.Log("You Died!");
             Destroy(gameObject);
         }
 
         if (coll.CompareTag("Star")) {
             // Destroy star, get score, reload 1 missile
-            playerScore.value += starScoreValue.Value;
+            playerScore.Value += starScoreValue.Value;
             coll.GetComponent<ObjectDestroyController>().Destroy();
         }
     }

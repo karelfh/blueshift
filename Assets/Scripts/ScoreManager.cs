@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
-    [SerializeField] private IntReference playerScore;
+    [SerializeField] private FloatReference playerScore;
 
     private Text scoreText;
 

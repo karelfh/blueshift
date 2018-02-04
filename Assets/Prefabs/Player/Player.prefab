@@ -141,17 +141,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed:
-    useConstant: 0
-    constantValue: 0
-    variable: {fileID: 11400000, guid: a58d01b81e72e744fbba70b4a402f1ed, type: 2}
+    UseConstant: 0
+    ConstantValue: 5
+    Variable: {fileID: 11400000, guid: a58d01b81e72e744fbba70b4a402f1ed, type: 2}
   forwardDistance:
-    useConstant: 1
-    constantValue: 7
-    variable: {fileID: 0}
+    UseConstant: 1
+    ConstantValue: 7
+    Variable: {fileID: 0}
   padding:
-    useConstant: 1
-    constantValue: 0.75
-    variable: {fileID: 0}
+    UseConstant: 1
+    ConstantValue: 0.75
+    Variable: {fileID: 0}
 --- !u!114 &114176273472171178
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,14 +165,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 11400000, guid: 93cc75b30c84ebf4480c3753c0eef7b9, type: 2}
   meteorDamageSmall:
-    useConstant: 0
-    constantValue: 0
-    variable: {fileID: 11400000, guid: df525bf9c20f736489c183847e10fe5b, type: 2}
-  playerScore: {fileID: 11400000, guid: 82c60d7087c0af146a42257e7f88c39e, type: 2}
+    UseConstant: 1
+    ConstantValue: 0.25
+    Variable: {fileID: 0}
+  playerScore: {fileID: 11400000, guid: bbf41cefc64ab5542bbc35540bc1e4b4, type: 2}
   starScoreValue:
-    useConstant: 0
-    constantValue: 0
-    variable: {fileID: 11400000, guid: 210d84538cd54724282d95dabee96354, type: 2}
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 36816473e448bc44d9383652b09b604c, type: 2}
 --- !u!212 &212992960504670152
 SpriteRenderer:
   m_ObjectHideFlags: 1
