@@ -38,7 +38,7 @@ public class IntReferenceEditor : PropertyDrawer {
         // Store old indent level and set it to 0, the PrefixLabel takes care of it
         int indent = EditorGUI.indentLevel;
         EditorGUI.indentLevel = 0;
-
+        
         int result = EditorGUI.Popup(buttonRect, useConstant.boolValue ? 0 : 1, popupOptions, popupStyle);
 
         useConstant.boolValue = result == 0;
@@ -46,7 +46,7 @@ public class IntReferenceEditor : PropertyDrawer {
         EditorGUI.PropertyField(position,
                                 useConstant.boolValue ? constantValue : variable,
                                 GUIContent.none);
-
+        
         if (EditorGUI.EndChangeCheck())
             property.serializedObject.ApplyModifiedProperties();
 
