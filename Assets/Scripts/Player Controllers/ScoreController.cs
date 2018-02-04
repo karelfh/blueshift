@@ -6,6 +6,10 @@ public class ScoreController : MonoBehaviour {
     [SerializeField] private FloatReference starScoreValue;
 
 
+    private void Start() {
+        playerScore.Value = 0f;
+    }
+
     private void OnTriggerEnter2D(Collider2D coll) {
         if (coll.CompareTag("Star")) {
             playerScore.Value += starScoreValue.Value;

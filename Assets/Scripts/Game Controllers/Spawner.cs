@@ -3,9 +3,9 @@ using System.Collections;
 
 [RequireComponent(typeof(ObjectPooler))]
 public class Spawner : MonoBehaviour {
-
-    [SerializeField] private float spawnValue;
-    [SerializeField] private float spawnDelay;
+    
+    [SerializeField] private FloatReference spawnValue;
+    [SerializeField] private FloatReference spawnDelay;   
 
     private ObjectPooler objectPooler;
 

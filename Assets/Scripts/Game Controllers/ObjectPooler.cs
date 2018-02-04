@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class ObjectPooler : MonoBehaviour {
 
     [SerializeField] private GameObject[] objectsToPool;
-    [SerializeField] private int pooledAmount;
+    [SerializeField] private FloatReference pooledAmount;
     [SerializeField] private bool willGrow;
 
     [HideInInspector] public List<GameObject> pooledObjects;

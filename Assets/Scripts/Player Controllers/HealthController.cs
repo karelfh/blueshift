@@ -6,6 +6,10 @@ public class HealthController : MonoBehaviour {
     [SerializeField] private FloatReference meteorDamageSmall;
 
 
+    private void Start() {
+        playerHealth.Value = 1f;
+    }
+
     private void OnTriggerEnter2D(Collider2D coll) {
         if (coll.CompareTag("Meteor")) {
             playerHealth.Value -= meteorDamageSmall.Value;
