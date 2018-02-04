@@ -38,8 +38,7 @@ GameObject:
   - component: {fileID: 50840385679160528}
   - component: {fileID: 60941403262134930}
   - component: {fileID: 114124044400454440}
-  - component: {fileID: 114475611240193982}
-  - component: {fileID: 114078981297291276}
+  - component: {fileID: 114176273472171178}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -130,22 +129,6 @@ PolygonCollider2D:
       - {x: 0.076397166, y: -0.37932727}
       - {x: 0.47857097, y: -0.24645936}
       - {x: 0.49477825, y: 0.09674216}
---- !u!114 &114078981297291276
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1538722571926520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ae2808e35b1084cb164716da693b70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScore: {fileID: 11400000, guid: bbf41cefc64ab5542bbc35540bc1e4b4, type: 2}
-  starScoreValue:
-    UseConstant: 0
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 36816473e448bc44d9383652b09b604c, type: 2}
 --- !u!114 &114124044400454440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed:
     UseConstant: 0
-    ConstantValue: 5
+    ConstantValue: 0
     Variable: {fileID: 11400000, guid: a58d01b81e72e744fbba70b4a402f1ed, type: 2}
   forwardDistance:
     UseConstant: 1
@@ -169,7 +152,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0.75
     Variable: {fileID: 0}
---- !u!114 &114475611240193982
+--- !u!114 &114176273472171178
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -177,7 +160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1538722571926520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 484bf4cc4aa26c340880b8dc460b5ebd, type: 3}
+  m_Script: {fileID: 11500000, guid: ab7af99dadc1c434693ce30512e0e07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 11400000, guid: 93cc75b30c84ebf4480c3753c0eef7b9, type: 2}
@@ -185,6 +168,11 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0.25
     Variable: {fileID: 0}
+  playerScore: {fileID: 11400000, guid: ef7050206eb7ce04c92e7273eacc260e, type: 2}
+  starScoreValue:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 42412ac03870e034e8aa76e4a5d4386a, type: 2}
 --- !u!212 &212992960504670152
 SpriteRenderer:
   m_ObjectHideFlags: 1
