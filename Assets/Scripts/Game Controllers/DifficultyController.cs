@@ -19,7 +19,6 @@ public class DifficultyController : MonoBehaviour {
             yield return new WaitForSeconds(changeTime);
 
             spawnDelay.Value -= change;
-            Debug.Log("Spawn delay changed to " + spawnDelay.Value);
         }
     }
 
