@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
+using System.Collections.Generic;
 
 public class HealthController : MonoBehaviour {
 
     [SerializeField] private FloatVariable playerHealth;
     [SerializeField] private FloatReference meteorDamageSmall;
+    [SerializeField] private UnityEvent deathEvent;
 
 
     private void Start() {
+        Time.timeScale = 1f;
         playerHealth.Value = 1f;
     }
 
@@ -17,8 +21,11 @@ public class HealthController : MonoBehaviour {
         }
 
         if (playerHealth.Value <= 0f) {
-            Debug.Log("You Died!");
-            Destroy(gameObject);
+            // Play destroy animation, destroy player, show score and stop time
+
+            deathEvent.Invoke();
+            Time.timeScale = 0f;
+            //SceneManager.LoadScene("01a Main Menu");
         }
     }
 

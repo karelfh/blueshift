@@ -9,6 +9,7 @@ public class FloatVariable : ScriptableObject {
 #endif
     public float Value;
 
+
     public void SetValue(float value) {
         Value = value;
     }
