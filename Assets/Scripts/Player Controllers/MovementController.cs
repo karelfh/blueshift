@@ -21,10 +21,18 @@ public class MovementController : MonoBehaviour {
     }
 
     private void Update() {
+        float pointer_x = Input.GetAxis("Mouse X");
+        float pointer_y = Input.GetAxis("Mouse Y");
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        Move(horizontal, vertical);
+        if (Input.touchCount > 0) {
+            pointer_x = Mathf.Clamp(Input.touches[0].deltaPosition.x, -1f, 1f);
+            pointer_y = Mathf.Clamp(Input.touches[0].deltaPosition.y, -1f, 1f);
+        }
+
+        Move(pointer_x, pointer_y);
     }
 
     private void Move(float horizontalAxis, float verticalAxis) {
