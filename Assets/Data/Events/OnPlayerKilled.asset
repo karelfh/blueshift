@@ -11,3 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b52cbf85ad8da4bb874eaca5e76025, type: 3}
   m_Name: OnPlayerKilled
   m_EditorClassIdentifier: 
+  developerDescription: 

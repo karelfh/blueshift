@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a302cba20ae67c54db8594791cfc646a, type: 3}
   m_Name: Meteor Damage Big
   m_EditorClassIdentifier: 
-  developerDescription: 
-  value: 0.5
+  DeveloperDescription: 
+  Value: 0.5

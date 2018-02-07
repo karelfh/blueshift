@@ -4,6 +4,11 @@ using System.Collections.Generic;
 [CreateAssetMenu(menuName = "Events", fileName = "New Event")]
 public class GameEvent : ScriptableObject {
 
+#if UNITY_EDITOR
+    [Multiline]
+    public string developerDescription;
+#endif
+
     /// <summary>
     /// The list of listeners that this event will notify if it is raised.
     /// </summary>
