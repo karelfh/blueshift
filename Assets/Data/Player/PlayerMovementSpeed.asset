@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: PlayerMovementSpeed
   m_EditorClassIdentifier: 
   DeveloperDescription: How Fast can player move.
-  Value: 4
+  Value: 3

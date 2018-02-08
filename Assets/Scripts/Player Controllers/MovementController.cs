@@ -13,6 +13,7 @@ public class MovementController : MonoBehaviour {
     [SerializeField] private FloatReference padding;
 
     private Vector2 movement;
+    private Vector3 pos;
     private float minX, maxX, distanceFromCam;
 
 
@@ -20,21 +21,21 @@ public class MovementController : MonoBehaviour {
         distanceFromCam = transform.position.z - Camera.main.transform.position.z;
     }
 
+    // TODO find the way to use speed and Time.deltaTime
     private void Update() {
-        float pointer_x = Input.GetAxis("Mouse X");
-        float pointer_y = Input.GetAxis("Mouse Y");
-
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        GetEdges();
 
         if (Input.touchCount > 0) {
-            pointer_x = Mathf.Clamp(Input.touches[0].deltaPosition.x, -1f, 1f);
-            pointer_y = Mathf.Clamp(Input.touches[0].deltaPosition.y, -1f, 1f);
+            pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 5));
         }
-
-        Move(pointer_x, pointer_y);
+        
+        transform.position = new Vector3(Mathf.Clamp(pos.x, minX, maxX),
+                                         Mathf.Clamp(pos.y, 0f, forwardDistance.Value),
+                                         transform.position.z);
+        
     }
 
+    // Not working right now
     private void Move(float horizontalAxis, float verticalAxis) {
         GetEdges();
 
