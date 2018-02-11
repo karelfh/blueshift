@@ -13,29 +13,23 @@ public class MovementController : MonoBehaviour {
     [SerializeField] private FloatReference padding;
 
     private Vector2 movement;
-    private Vector3 pos;
-    private float minX, maxX, distanceFromCam;
+    private float minX, maxX, distanceFromCam, screenCenterX;
 
 
     private void Start() {
         distanceFromCam = transform.position.z - Camera.main.transform.position.z;
+        screenCenterX = Screen.width * 0.5f; 
     }
 
-    // TODO find the way to use speed and Time.deltaTime
     private void Update() {
         GetEdges();
 
-        if (Input.touchCount > 0) {
-            pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, 5));
-        }
-        
-        transform.position = new Vector3(Mathf.Clamp(pos.x, minX, maxX),
-                                         Mathf.Clamp(pos.y, 0f, forwardDistance.Value),
-                                         transform.position.z);
-        
-    }
+        Move(GetHorizontalTouch(), 0);
 
-    // Not working right now
+        // TODO: touch left from the player - move left, etc. > https://forum.unity.com/threads/comparing-finger-input-position-to-object-position-android-c.282738/
+        //Debug.Log("Touch: " + Input.GetTouch(0).position + ", object: " + Camera.main.WorldToScreenPoint(transform.position));
+    }   
+
     private void Move(float horizontalAxis, float verticalAxis) {
         GetEdges();
 
@@ -47,6 +41,22 @@ public class MovementController : MonoBehaviour {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX),
                                          Mathf.Clamp(transform.position.y, 0f, forwardDistance.Value),
                                          transform.position.z); 
+    }
+
+    private float GetHorizontalTouch() {
+        if (Input.touchCount > 0) {
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase != TouchPhase.Ended) {
+                if (touch.position.x > screenCenterX) {
+                    return 1f;
+                } else if (touch.position.x < screenCenterX) {
+                    return -1f;
+                }
+            }
+        }
+
+        return 0f;
     }
 
     private void GetEdges() {
