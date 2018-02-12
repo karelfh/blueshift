@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114124044400454440}
   - component: {fileID: 114694647638801732}
   - component: {fileID: 114232925198194482}
-  - component: {fileID: 114522778737891478}
+  - component: {fileID: 114672513723835270}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -170,18 +170,34 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 42412ac03870e034e8aa76e4a5d4386a, type: 2}
---- !u!114 &114522778737891478
+  pickupEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e07569e8295d8cc469c10882277ef5d1, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &114672513723835270
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1538722571926520}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e76cd17a187578428c63ced8aa9dbee, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d8d45880f02f2a419238e46941fcfc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  padding: 0
+  freezeDuration: 1
 --- !u!114 &114694647638801732
 MonoBehaviour:
   m_ObjectHideFlags: 1

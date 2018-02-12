@@ -25,7 +25,6 @@ public class HealthController : MonoBehaviour {
 
             deathEvent.Invoke();
             Time.timeScale = 0f;
-            //SceneManager.LoadScene("01a Main Menu");
         }
     }
 
