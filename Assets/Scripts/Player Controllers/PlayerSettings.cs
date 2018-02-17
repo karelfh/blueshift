@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
 
 public class PlayerSettings : SingletonMonoBehaviour<PlayerSettings> {
 
+    // General Settings
+    public const string companyName = "Mist Gate Studios";
+    public const string productName = "Blueshift";
+
+    // Sound Settings
     private const string MASTER_VOLUME = "Master Volume";
     private const string EFFECTS_VOLUME = "Effects Volume";
     private const string MUSIC_VOLUME = "Music Volume";
@@ -36,8 +40,10 @@ public class PlayerSettings : SingletonMonoBehaviour<PlayerSettings> {
     #endregion
     #region Sound On/Off
     public static void SetSoundOnOff(int boolean) {
-        if (boolean == 1) {
+        if (boolean == 1 || boolean == 0) {
             PlayerPrefs.SetInt(SOUND_ON_OFF, boolean);
+        } else {
+            Debug.LogError("Boolean is out of range (0 or 1)!");
         }
     }
     #endregion

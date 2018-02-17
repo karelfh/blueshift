@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4297980635391040}
   - component: {fileID: 114162767360369438}
   - component: {fileID: 114083243996962916}
+  - component: {fileID: 114289441080949106}
   m_Layer: 0
   m_Name: __app
   m_TagString: Untagged
@@ -71,3 +72,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b029acbc7bcb126459a91181696710c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114289441080949106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1234983377271914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd2dd05216a15a48970aa1fa8a98b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 0}
+    source: {fileID: 0}
+    volume:
+      UseConstant: 1
+      ConstantValue: 0.25
+      Variable: {fileID: 0}
+    pitch:
+      UseConstant: 1
+      ConstantValue: 1
+      Variable: {fileID: 0}
+    loop: 1
+  - name: HitSound
+    clip: {fileID: 0}
+    source: {fileID: 0}
+    volume:
+      UseConstant: 1
+      ConstantValue: 0.25
+      Variable: {fileID: 0}
+    pitch:
+      UseConstant: 1
+      ConstantValue: 1
+      Variable: {fileID: 0}
+    loop: 0

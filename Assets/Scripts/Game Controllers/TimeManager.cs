@@ -16,7 +16,6 @@ public class TimeManager : MonoBehaviour {
             Time.timeScale += (1 / slowdownLength) * Time.unscaledDeltaTime;
             Time.timeScale = Mathf.Clamp(Time.timeScale, 0, 1);
         }
-        Debug.Log(Time.timeScale);
     }
 
     public void SlowdownTime() {
