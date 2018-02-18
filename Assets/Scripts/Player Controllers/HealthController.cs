@@ -21,22 +21,22 @@ public class HealthController : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D coll) {
-        if (coll.CompareTag("Meteor")) {
-            hitEvent.Invoke();
+        if (coll.CompareTag("Meteor")) {          
             hitCount++;
 
             playerHealth.Value -= meteorDamageSmall.Value;
             coll.GetComponent<ObjectDestroyController>().Destroy();
+
+            if (playerHealth.Value <= 0f) {
+                deathEvent.Invoke();
+                Time.timeScale = 0f;
+            } else {
+                hitEvent.Invoke();
+                LoadDamageSprite();
+            }
         }
 
-        if (playerHealth.Value <= 0f) {
-            // Play destroy animation, destroy player, show score and stop time
-            deathEvent.Invoke();
-
-            Time.timeScale = 0f;
-        } else {
-            LoadDamageSprite();
-        }
+        
     }
 
     private void LoadDamageSprite() {
