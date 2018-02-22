@@ -1,16 +1,11 @@
 ﻿using UnityEngine;
-using UnityEngine.Audio;
 
-[CreateAssetMenu(fileName = "New Sound", menuName = "Audio/Sound", order = 1)]
-public class Sound : ScriptableObject {
+[System.Serializable]
+public class Sound {
 
-    public new string name;
-    public string handle;
+    public string name;
 
     public AudioClip clip;
-
-    public FloatReference volume;
-    public FloatReference pitch;
 
     public bool loop;
 

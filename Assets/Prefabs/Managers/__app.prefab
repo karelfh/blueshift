@@ -19,9 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4297980635391040}
+  - component: {fileID: 114567985806718302}
   - component: {fileID: 114162767360369438}
   - component: {fileID: 114083243996962916}
-  - component: {fileID: 114289441080949106}
+  - component: {fileID: 114124400122792782}
   m_Layer: 0
   m_Name: __app
   m_TagString: Untagged
@@ -61,18 +62,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 1
     Variable: {fileID: 0}
---- !u!114 &114162767360369438
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1234983377271914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b029acbc7bcb126459a91181696710c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114289441080949106
+--- !u!114 &114124400122792782
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -84,63 +74,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 7a797beec3a9b184cbc7a4c534d6222d, type: 3}
-    source: {fileID: 0}
-    volume:
-      UseConstant: 1
-      ConstantValue: 0.25
-      Variable: {fileID: 0}
-    pitch:
-      UseConstant: 1
-      ConstantValue: 1
-      Variable: {fileID: 0}
-    loop: 1
   - name: Pickup
     clip: {fileID: 8300000, guid: 761171dc4724bca4485273aa4b715f61, type: 3}
-    source: {fileID: 0}
-    volume:
-      UseConstant: 1
-      ConstantValue: 0.25
-      Variable: {fileID: 0}
-    pitch:
-      UseConstant: 1
-      ConstantValue: 1
-      Variable: {fileID: 0}
     loop: 0
   - name: Hit
     clip: {fileID: 8300000, guid: c159c3ec48c56d744ac1cac931e7dbab, type: 3}
-    source: {fileID: 0}
-    volume:
-      UseConstant: 1
-      ConstantValue: 0.25
-      Variable: {fileID: 0}
-    pitch:
-      UseConstant: 1
-      ConstantValue: 1
-      Variable: {fileID: 0}
     loop: 0
   - name: Death
     clip: {fileID: 8300000, guid: 7b59610955760d849b0790780bd29f75, type: 3}
-    source: {fileID: 0}
-    volume:
-      UseConstant: 1
-      ConstantValue: 0.25
-      Variable: {fileID: 0}
-    pitch:
-      UseConstant: 1
-      ConstantValue: 1
-      Variable: {fileID: 0}
     loop: 0
+  music:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 7a797beec3a9b184cbc7a4c534d6222d, type: 3}
+    loop: 1
   - name: Menu
     clip: {fileID: 8300000, guid: 8213be3df4d3ea84ea14a08ed19602c2, type: 3}
-    source: {fileID: 0}
-    volume:
-      UseConstant: 1
-      ConstantValue: 0.25
-      Variable: {fileID: 0}
-    pitch:
-      UseConstant: 1
-      ConstantValue: 1
-      Variable: {fileID: 0}
     loop: 1
+--- !u!114 &114162767360369438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1234983377271914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b029acbc7bcb126459a91181696710c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114567985806718302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1234983377271914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22975c5884d6644087b083e3aa518b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
