@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1922445473372124}
+  m_IsPrefabParent: 1
+--- !u!1 &1922445473372124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4054570646761786}
+  - component: {fileID: 114392733523696060}
+  - component: {fileID: 114086959446751952}
+  m_Layer: 0
+  m_Name: Music Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4054570646761786
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1922445473372124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114086959446751952
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1922445473372124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bd2dd05216a15a48970aa1fa8a98b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterAudioMixer: {fileID: 24100000, guid: e1ebe92d03b7be2458eec2b9f32d919f, type: 2}
+  musicMixerGroup: {fileID: 243090320092622800, guid: e1ebe92d03b7be2458eec2b9f32d919f,
+    type: 2}
+  music:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 7a797beec3a9b184cbc7a4c534d6222d, type: 3}
+    source: {fileID: 0}
+    loop: 1
+  - name: Menu
+    clip: {fileID: 8300000, guid: 8213be3df4d3ea84ea14a08ed19602c2, type: 3}
+    source: {fileID: 0}
+    loop: 1
+--- !u!114 &114392733523696060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1922445473372124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22975c5884d6644087b083e3aa518b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -15,6 +15,8 @@ public class TimeManager : MonoBehaviour {
         if (!isGameOver) {
             Time.timeScale += (1 / slowdownLength) * Time.unscaledDeltaTime;
             Time.timeScale = Mathf.Clamp(Time.timeScale, 0, 1);
+        } else {
+            Time.timeScale = 0f;
         }
     }
 

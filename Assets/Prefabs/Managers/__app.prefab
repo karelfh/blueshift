@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4297980635391040}
   - component: {fileID: 114567985806718302}
+  - component: {fileID: 114009257791708578}
   - component: {fileID: 114162767360369438}
   - component: {fileID: 114083243996962916}
   - component: {fileID: 114124400122792782}
@@ -43,6 +44,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114009257791708578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1234983377271914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdcb33be793dc6418f76d312a482033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 1, b: 0.04827571, a: 1}
 --- !u!114 &114083243996962916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,22 +86,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bd2dd05216a15a48970aa1fa8a98b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masterAudioMixer: {fileID: 24100000, guid: e1ebe92d03b7be2458eec2b9f32d919f, type: 2}
+  effectsMixerGroup: {fileID: 243624411731237684, guid: e1ebe92d03b7be2458eec2b9f32d919f,
+    type: 2}
   sounds:
   - name: Pickup
     clip: {fileID: 8300000, guid: 761171dc4724bca4485273aa4b715f61, type: 3}
+    source: {fileID: 0}
     loop: 0
   - name: Hit
     clip: {fileID: 8300000, guid: c159c3ec48c56d744ac1cac931e7dbab, type: 3}
+    source: {fileID: 0}
     loop: 0
   - name: Death
     clip: {fileID: 8300000, guid: 7b59610955760d849b0790780bd29f75, type: 3}
+    source: {fileID: 0}
     loop: 0
+  musicMixerGroup: {fileID: 243090320092622800, guid: e1ebe92d03b7be2458eec2b9f32d919f,
+    type: 2}
   music:
   - name: Theme
     clip: {fileID: 8300000, guid: 7a797beec3a9b184cbc7a4c534d6222d, type: 3}
+    source: {fileID: 0}
     loop: 1
   - name: Menu
     clip: {fileID: 8300000, guid: 8213be3df4d3ea84ea14a08ed19602c2, type: 3}
+    source: {fileID: 0}
     loop: 1
 --- !u!114 &114162767360369438
 MonoBehaviour:
