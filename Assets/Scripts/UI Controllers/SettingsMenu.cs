@@ -4,7 +4,8 @@ using UnityEngine.Audio;
 
 public class SettingsMenu : MonoBehaviour {
 
-    private AudioMixer audioMixer;
+    [SerializeField] private AudioMixer masterMixer;
+
     private Slider masterVolumeSlider;
     private Slider effectsVolumeSlider;
     private Slider musicVolumeSlider;
@@ -30,6 +31,18 @@ public class SettingsMenu : MonoBehaviour {
         PlayerSettings.SetEffectsVolume(effectsVolumeSlider.value);
         PlayerSettings.SetMuicVolume(musicVolumeSlider.value);
         PlayerSettings.SetSoundOnOff((int)soundOnOffSlider.value);
+
+        SetMixerVolume();        
+    }
+
+    private void SetMixerVolume() {
+        if (PlayerSettings.GetSoundOnOff() == 0) {
+            masterMixer.SetFloat("Master Volume", -80f);
+        } else {
+            masterMixer.SetFloat("Master Volume", PlayerSettings.GetMasterVolume());
+            masterMixer.SetFloat("Music Volume", PlayerSettings.GetMusicVolume());
+            masterMixer.SetFloat("Effects Volume", PlayerSettings.GetEffectsVolume());
+        }
     }
 
 }

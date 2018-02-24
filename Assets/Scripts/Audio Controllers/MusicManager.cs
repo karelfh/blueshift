@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 
-public class MusicManager : MonoBehaviour {
+public class MusicManager : SingletonMonoBehaviour<MusicManager> {
 
     [Tooltip("Main Audio Mixer to rule them all.")]
     [SerializeField] private AudioMixer masterAudioMixer;
@@ -21,17 +21,6 @@ public class MusicManager : MonoBehaviour {
 
     private void Start() {
         GenerateMusic();
-    }
-
-    // TODO: Move this check on level manager
-    private void OnLevelWasLoaded(int level) {
-        if (level == 1) {
-            PlayMusic("Menu");
-        }
-        if (level == 5) {
-            PlayMusic("Theme");
-            StopAudio("Menu");
-        }
     }
 
     public void PlayMusic(string name) {

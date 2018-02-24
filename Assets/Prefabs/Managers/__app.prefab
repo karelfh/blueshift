@@ -87,21 +87,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterAudioMixer: {fileID: 24100000, guid: e1ebe92d03b7be2458eec2b9f32d919f, type: 2}
-  effectsMixerGroup: {fileID: 243624411731237684, guid: e1ebe92d03b7be2458eec2b9f32d919f,
-    type: 2}
-  sounds:
-  - name: Pickup
-    clip: {fileID: 8300000, guid: 761171dc4724bca4485273aa4b715f61, type: 3}
-    source: {fileID: 0}
-    loop: 0
-  - name: Hit
-    clip: {fileID: 8300000, guid: c159c3ec48c56d744ac1cac931e7dbab, type: 3}
-    source: {fileID: 0}
-    loop: 0
-  - name: Death
-    clip: {fileID: 8300000, guid: 7b59610955760d849b0790780bd29f75, type: 3}
-    source: {fileID: 0}
-    loop: 0
   musicMixerGroup: {fileID: 243090320092622800, guid: e1ebe92d03b7be2458eec2b9f32d919f,
     type: 2}
   music:
@@ -109,10 +94,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7a797beec3a9b184cbc7a4c534d6222d, type: 3}
     source: {fileID: 0}
     loop: 1
+    volume: 0.75
+    pitch: 1
   - name: Menu
     clip: {fileID: 8300000, guid: 8213be3df4d3ea84ea14a08ed19602c2, type: 3}
     source: {fileID: 0}
     loop: 1
+    volume: 1
+    pitch: 1
 --- !u!114 &114162767360369438
 MonoBehaviour:
   m_ObjectHideFlags: 1

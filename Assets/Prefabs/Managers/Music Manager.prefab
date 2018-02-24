@@ -60,10 +60,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7a797beec3a9b184cbc7a4c534d6222d, type: 3}
     source: {fileID: 0}
     loop: 1
+    volume: 0.75
+    pitch: 1
   - name: Menu
     clip: {fileID: 8300000, guid: 8213be3df4d3ea84ea14a08ed19602c2, type: 3}
     source: {fileID: 0}
     loop: 1
+    volume: 1
+    pitch: 1
 --- !u!114 &114392733523696060
 MonoBehaviour:
   m_ObjectHideFlags: 1

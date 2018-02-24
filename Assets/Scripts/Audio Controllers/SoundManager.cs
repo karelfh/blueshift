@@ -4,11 +4,8 @@ using UnityEngine.Audio;
 public class SoundManager : MonoBehaviour {
 
     [Tooltip("Main Audio Mixer to rule them all.")]
-    [SerializeField]
-    private AudioMixer masterAudioMixer;
-
-    [SerializeField]
-    private AudioMixerGroup effectsMixerGroup;
+    [SerializeField] private AudioMixer masterAudioMixer;
+    [SerializeField] private AudioMixerGroup effectsMixerGroup;
 
     public Sound[] sounds;
 

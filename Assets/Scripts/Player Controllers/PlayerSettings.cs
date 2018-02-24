@@ -15,7 +15,7 @@ public class PlayerSettings : SingletonMonoBehaviour<PlayerSettings> {
     #region Sets
     #region Volume
     public static void SetMasterVolume(float volume) {
-        if (volume > -80f && volume < 1f) {
+        if (volume >= -80f && volume < 1f) {
             PlayerPrefs.SetFloat(MASTER_VOLUME, volume);
         } else {
             Debug.LogError("Master Volume out of range (-80 to 1)!");
@@ -23,7 +23,7 @@ public class PlayerSettings : SingletonMonoBehaviour<PlayerSettings> {
     }
 
     public static void SetEffectsVolume(float volume) {
-        if (volume > -80f && volume < 1f) {
+        if (volume >= -80f && volume < 1f) {
             PlayerPrefs.SetFloat(EFFECTS_VOLUME, volume);
         } else {
             Debug.LogError("Effects Volume out of range (-80 to 1)!");
@@ -31,7 +31,7 @@ public class PlayerSettings : SingletonMonoBehaviour<PlayerSettings> {
     }
 
     public static void SetMuicVolume(float volume) {
-        if (volume > -80f && volume < 1f) {
+        if (volume >= -80f && volume < 1f) {
             PlayerPrefs.SetFloat(MUSIC_VOLUME, volume);
         } else {
             Debug.LogError("Music Volume out of range (-80 to 1)!");
