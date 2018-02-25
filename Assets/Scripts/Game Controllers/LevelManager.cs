@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour {
         if (level == 1) {
             MusicManager.Instance.PlayMusic("Menu");
         }
-        if (level == 5) {
+        if (level == 4) {
             MusicManager.Instance.PlayMusic("Theme");
             MusicManager.Instance.StopAudio("Menu");
         }

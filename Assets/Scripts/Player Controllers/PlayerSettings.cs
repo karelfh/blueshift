@@ -12,6 +12,10 @@ public class PlayerSettings : SingletonMonoBehaviour<PlayerSettings> {
     private const string MUSIC_VOLUME = "Music Volume";
     private const string SOUND_ON_OFF = "Sound On Off";
 
+    // Save Settings
+    private const string PLAYER_HI_SCORE = "Player Hi Score";  
+
+
     #region Sets
     #region Volume
     public static void SetMasterVolume(float volume) {
@@ -47,6 +51,11 @@ public class PlayerSettings : SingletonMonoBehaviour<PlayerSettings> {
         }
     }
     #endregion
+    #region Save
+    public static void SetPlayerHiScore(float value) {
+        PlayerPrefs.SetFloat(PLAYER_HI_SCORE, value);
+    }
+    #endregion
     #endregion
 
 
@@ -67,6 +76,11 @@ public class PlayerSettings : SingletonMonoBehaviour<PlayerSettings> {
     #region Sound On/Off
     public static int GetSoundOnOff() {
         return PlayerPrefs.GetInt(SOUND_ON_OFF);
+    }
+    #endregion
+    #region Save
+    public static float GetPlayerHiScore() {
+        return PlayerPrefs.GetFloat(PLAYER_HI_SCORE);
     }
     #endregion
     #endregion

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114009257791708578}
   - component: {fileID: 114162767360369438}
   - component: {fileID: 114083243996962916}
-  - component: {fileID: 114124400122792782}
+  - component: {fileID: 114782541655521648}
   m_Layer: 0
   m_Name: __app
   m_TagString: Untagged
@@ -75,33 +75,6 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 1
     Variable: {fileID: 0}
---- !u!114 &114124400122792782
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1234983377271914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bd2dd05216a15a48970aa1fa8a98b78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  masterAudioMixer: {fileID: 24100000, guid: e1ebe92d03b7be2458eec2b9f32d919f, type: 2}
-  musicMixerGroup: {fileID: 243090320092622800, guid: e1ebe92d03b7be2458eec2b9f32d919f,
-    type: 2}
-  music:
-  - name: Theme
-    clip: {fileID: 8300000, guid: 7a797beec3a9b184cbc7a4c534d6222d, type: 3}
-    source: {fileID: 0}
-    loop: 1
-    volume: 0.75
-    pitch: 1
-  - name: Menu
-    clip: {fileID: 8300000, guid: 8213be3df4d3ea84ea14a08ed19602c2, type: 3}
-    source: {fileID: 0}
-    loop: 1
-    volume: 1
-    pitch: 1
 --- !u!114 &114162767360369438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,3 +97,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f22975c5884d6644087b083e3aa518b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114782541655521648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1234983377271914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 363ab49cdaffc83478f09be8d409cb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScore:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: ef7050206eb7ce04c92e7273eacc260e, type: 2}
+  playerHiScore: {fileID: 11400000, guid: a191d11dc26a6b647a4001c4d00bdfc8, type: 2}
