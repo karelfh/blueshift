@@ -20,13 +20,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4920843171125402}
   - component: {fileID: 50594586593767380}
-  - component: {fileID: 58506828112598348}
+  - component: {fileID: 60207069079473070}
   - component: {fileID: 114441373141105510}
   - component: {fileID: 114162040891392120}
   m_Layer: 0
   m_Name: Meteor (2)
   m_TagString: Meteor
-  m_Icon: {fileID: -6488666005112524639, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -93,8 +93,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58506828112598348
-CircleCollider2D:
+--- !u!60 &60207069079473070
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -106,8 +106,24 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.505
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.20395517, y: 0.38956797}
+      - {x: -0.3136698, y: 0.38718426}
+      - {x: -0.46954334, y: -0.09076679}
+      - {x: -0.20863247, y: -0.36983573}
+      - {x: 0.105118394, y: -0.25500977}
+      - {x: 0.32900476, y: -0.2891171}
+      - {x: 0.46191978, y: 0.0080240965}
 --- !u!114 &114162040891392120
 MonoBehaviour:
   m_ObjectHideFlags: 1
