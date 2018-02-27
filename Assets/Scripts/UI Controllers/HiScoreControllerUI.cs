@@ -3,8 +3,6 @@ using UnityEngine.UI;
 
 public class HiScoreControllerUI : MonoBehaviour {
 
-    //[SerializeField] private FloatReference playHiScore;
-
     private Text scoreText;
 
 
