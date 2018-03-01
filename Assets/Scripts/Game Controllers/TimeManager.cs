@@ -8,16 +8,23 @@ public class TimeManager : MonoBehaviour {
     [Tooltip("For how long, in seconds, will time be slowed.")]
     [SerializeField] private FloatReference slowdownLength;
 
+    private bool isGameStarted = false;
     private bool isGameOver = false;
 
 
     private void Update() {
-        if (!isGameOver) {
-            Time.timeScale += (1 / slowdownLength) * Time.unscaledDeltaTime;
-            Time.timeScale = Mathf.Clamp(Time.timeScale, 0, 1);
-        } else {
+        if (!isGameStarted) {
             Time.timeScale = 0f;
+        } else {
+            if (!isGameOver && isGameStarted) {
+                Time.timeScale += (1 / slowdownLength) * Time.unscaledDeltaTime;
+                Time.timeScale = Mathf.Clamp(Time.timeScale, 0, 1);
+            } else {
+                Time.timeScale = 0f;
+            }
         }
+
+        
     }
 
     public void SlowdownTime() {
@@ -27,5 +34,9 @@ public class TimeManager : MonoBehaviour {
 
     public void IsGameOver(bool _isGameOver) {
         isGameOver = _isGameOver;
+    }
+
+    public void IsGameStarted(bool _isGameStarted) {
+        isGameStarted = _isGameStarted;
     }
 }
