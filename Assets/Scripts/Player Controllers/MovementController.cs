@@ -9,6 +9,7 @@ public class MovementController : MonoBehaviour {
     [Header("Boundary Settings")]
     [Tooltip("How far forward can player move.")]
     [SerializeField] private FloatReference forwardDistance;
+
     [Tooltip("Padding on the edge of the screen on both sides.")]
     [SerializeField] private FloatReference padding;
 
@@ -18,17 +19,14 @@ public class MovementController : MonoBehaviour {
 
     private void Start() {
         distanceFromCam = transform.position.z - Camera.main.transform.position.z;
-        screenCenterX = Screen.width * 0.5f; 
+        screenCenterX = Screen.width * 0.5f;
     }
 
     private void Update() {
         GetEdges();
 
         Move(GetHorizontalTouch(), 0);
-
-        // TODO: touch left from the player - move left, etc. > https://forum.unity.com/threads/comparing-finger-input-position-to-object-position-android-c.282738/
-        //Debug.Log("Touch: " + Input.GetTouch(0).position + ", object: " + Camera.main.WorldToScreenPoint(transform.position));
-    }   
+    }
 
     private void Move(float horizontalAxis, float verticalAxis) {
         GetEdges();
@@ -40,7 +38,7 @@ public class MovementController : MonoBehaviour {
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX),
                                          Mathf.Clamp(transform.position.y, 0f, forwardDistance.Value),
-                                         transform.position.z); 
+                                         transform.position.z);
     }
 
     private float GetHorizontalTouch() {
@@ -66,5 +64,4 @@ public class MovementController : MonoBehaviour {
         minX = leftEdge.x + padding.Value;
         maxX = rightEdge.x - padding.Value;
     }
-
 }
