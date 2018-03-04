@@ -9,6 +9,7 @@ public class TargetIndicator : MonoBehaviour {
 
 
     private void Update() {
+        // TODO: refactoring needed
         target = GameObject.FindGameObjectWithTag("Star").transform;
 
         Vector3 directiuon = target.position - transform.position;

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114473354274168786}
   - component: {fileID: 114452046918433290}
   m_Layer: 0
-  m_Name: Star
+  m_Name: Astronaut
   m_TagString: Star
   m_Icon: {fileID: -3701561207968579530, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -134,6 +134,16 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 2
     Variable: {fileID: 0}
+  canRotate: 1
+  body: {fileID: 4567252164617962}
+  minRotationSpeed:
+    UseConstant: 1
+    ConstantValue: 10
+    Variable: {fileID: 0}
+  maxRotationSpeed:
+    UseConstant: 1
+    ConstantValue: 45
+    Variable: {fileID: 0}
 --- !u!212 &212631440667142922
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -168,7 +178,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 84eda0a937a492445b0b4dc95db03663, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1a6a4e962eea8141ab79ef94becd130, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

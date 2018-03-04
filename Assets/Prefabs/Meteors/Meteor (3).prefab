@@ -134,6 +134,16 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 3
     Variable: {fileID: 0}
+  canRotate: 1
+  body: {fileID: 4509044387344370}
+  minRotationSpeed:
+    UseConstant: 1
+    ConstantValue: 25
+    Variable: {fileID: 0}
+  maxRotationSpeed:
+    UseConstant: 1
+    ConstantValue: 90
+    Variable: {fileID: 0}
 --- !u!212 &212450092362315038
 SpriteRenderer:
   m_ObjectHideFlags: 1

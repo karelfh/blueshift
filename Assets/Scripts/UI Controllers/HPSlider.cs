@@ -5,15 +5,15 @@ public class HPSlider : MonoBehaviour {
 
     [SerializeField] private FloatReference playerHealth;
 
-    private Slider hpSlider;
+    private Image hpSlider;
 
 
     private void Awake() {
-        hpSlider = GetComponent<Slider>();
+        hpSlider = GetComponent<Image>();
     }
 
     private void Update() {
-        hpSlider.value = playerHealth.Value;
+        hpSlider.fillAmount = playerHealth.Value;
     }
 
 }
