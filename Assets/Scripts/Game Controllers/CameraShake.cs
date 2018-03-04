@@ -29,7 +29,7 @@ public class CameraShake : SingletonMonoBehaviour<CameraShake> {
         float shake = Random.Range(-shakeIntesity, shakeIntesity);
         transform.localRotation = Quaternion.Euler(0f, 0f, shake);
 
-        yield return WaitFor(shakeDuration);
+        yield return Coroutine.Instance.WaitFor(shakeDuration);
 
         Disable();
     }
@@ -39,14 +39,6 @@ public class CameraShake : SingletonMonoBehaviour<CameraShake> {
 
         transform.localPosition = originalCamPos;
         transform.localRotation = originalCamRot;
-    }
-
-    private IEnumerator WaitFor(float seconds) {
-        float end = Time.realtimeSinceStartup + seconds;
-
-        while (Time.realtimeSinceStartup < end) {
-            yield return null;
-        }
     }
 
 }

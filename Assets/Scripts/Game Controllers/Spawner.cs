@@ -33,7 +33,7 @@ public class Spawner : MonoBehaviour {
             obj.transform.rotation = transform.rotation;
             obj.SetActive(true);
 
-            yield return new WaitForSeconds(spawnDelay);
+            yield return Coroutine.Instance.WaitFor(spawnDelay);
         }
     }
 

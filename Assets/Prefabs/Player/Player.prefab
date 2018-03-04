@@ -102,6 +102,8 @@ GameObject:
   - component: {fileID: 4402626332533034}
   - component: {fileID: 50840385679160528}
   - component: {fileID: 60941403262134930}
+  - component: {fileID: 114731710655289514}
+  - component: {fileID: 114155550286761692}
   - component: {fileID: 114124044400454440}
   - component: {fileID: 114694647638801732}
   - component: {fileID: 114232925198194482}
@@ -291,6 +293,17 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 0.75
     Variable: {fileID: 0}
+--- !u!114 &114155550286761692
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538722571926520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d883456185ed14a4597449e9f3e20881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114232925198194482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -386,6 +399,25 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114731710655289514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538722571926520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce30468e092d0745a2f2282aa1136dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToPool:
+  - {fileID: 1848154631298086, guid: 44158bcef6b14a54786377f75242c390, type: 2}
+  pooledAmount:
+    UseConstant: 1
+    ConstantValue: 3
+    Variable: {fileID: 0}
+  willGrow: 1
+  pooledObjects: []
 --- !u!114 &114880140344228904
 MonoBehaviour:
   m_ObjectHideFlags: 1
