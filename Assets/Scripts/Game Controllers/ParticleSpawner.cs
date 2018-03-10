@@ -32,7 +32,7 @@ public class ParticleSpawner : MonoBehaviour {
         obj.transform.rotation = transform.rotation;
         obj.SetActive(true);
 
-        yield return Coroutine.Instance.WaitFor(1.1f);
+        yield return new WaitForSeconds(1.1f);
 
         obj.SetActive(false);
     }

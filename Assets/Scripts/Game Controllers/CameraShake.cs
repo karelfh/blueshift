@@ -29,7 +29,7 @@ public class CameraShake : SingletonMonoBehaviour<CameraShake> {
         float shake = Random.Range(-shakeIntesity, shakeIntesity);
         transform.localRotation = Quaternion.Euler(0f, 0f, shake);
 
-        yield return Coroutine.Instance.WaitFor(shakeDuration);
+        yield return new WaitForSeconds(shakeDuration);
 
         Disable();
     }

@@ -16,17 +16,9 @@ public class DifficultyController : MonoBehaviour {
 
     private IEnumerator SpeedIncrease() {
         while (true) {
-            yield return WaitFor(changeTime);
+            yield return new WaitForSeconds(changeTime);
 
-            spawnDelay.Value -= change;   
-        }
-    }
-
-    private IEnumerator WaitFor(float seconds) {
-        float end = Time.realtimeSinceStartup + seconds;
-
-        while (Time.realtimeSinceStartup < end) {
-            yield return null;
+            spawnDelay.Value -= change;
         }
     }
 

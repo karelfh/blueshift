@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Coroutine : SingletonMonoBehaviour<Coroutine> {
-
+    /*
     public IEnumerator WaitFor(float seconds) {
         float end = Time.realtimeSinceStartup + seconds;
 
@@ -10,5 +10,5 @@ public class Coroutine : SingletonMonoBehaviour<Coroutine> {
             yield return null;
         }
     }
-
+    */
 }

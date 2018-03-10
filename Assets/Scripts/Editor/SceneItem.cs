@@ -24,11 +24,6 @@ public class SceneItem : Editor {
         OpenScene("01b Options");
     }
 
-    [MenuItem("Open Scene/Menu/High Score")]
-    public static void OpenHighScore() {
-        OpenScene("01c High Score");
-    }
-
     [MenuItem("Open Scene/Levels/Game")]
     public static void OpenGame() {
         OpenScene("02 Game");
