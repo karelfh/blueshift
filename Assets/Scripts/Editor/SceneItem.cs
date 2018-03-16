@@ -9,9 +9,9 @@ public class SceneItem : Editor {
         OpenScene("00a Preload");
     }
 
-    [MenuItem("Open Scene/Menu/Splash")]
-    public static void OpenSplash() {
-        OpenScene("00b Splash");
+    [MenuItem("Open Scene/Menu/Menu Preload")]
+    public static void OpenMenuPreload() {
+        OpenScene("00b Menu Preload");
     }
 
     [MenuItem("Open Scene/Menu/Main Menu")]

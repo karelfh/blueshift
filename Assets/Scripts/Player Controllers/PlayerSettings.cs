@@ -13,7 +13,8 @@ public class PlayerSettings : SingletonMonoBehaviour<PlayerSettings> {
     private const string SOUND_ON_OFF = "Sound On Off";
 
     // Save Settings
-    private const string PLAYER_HI_SCORE = "Player Hi Score";  
+    private const string PLAYER_HI_SCORE = "Player Hi Score";
+    private const string PLAYER_LIVES = "Player Lives";
 
 
     #region Sets

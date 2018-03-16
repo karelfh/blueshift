@@ -5,7 +5,9 @@ public class MusicManager : SingletonMonoBehaviour<MusicManager> {
 
     [Tooltip("Main Audio Mixer to rule them all.")]
     [SerializeField] private AudioMixer masterAudioMixer;
-    [SerializeField] private AudioMixerGroup musicMixerGroup;   
+    [SerializeField] private AudioMixerGroup musicMixerGroup;
+
+    [HideInInspector] public bool isPlaying;
 
     public Sound[] music;
 
@@ -31,11 +33,14 @@ public class MusicManager : SingletonMonoBehaviour<MusicManager> {
             return;
         }
 
+        isPlaying = true;
         m.source.Play();
     }
 
     public void StopAudio(string name) {
         Sound m = System.Array.Find(music, sound => sound.name == name);
+
+        isPlaying = false;
         m.source.Stop();
     }
 

@@ -11,6 +11,7 @@ public class HealthController : MonoBehaviour {
     [SerializeField] private UnityEvent hitEvent;
 
     private int hitCount;
+    private bool restarted;
 
 
     private void Start() {

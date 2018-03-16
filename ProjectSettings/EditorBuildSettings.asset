@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/00a Preload.unity
     guid: 3983baf5de2070240b9bab131c709bc2
   - enabled: 1
-    path: Assets/Scenes/00b Splash.unity
-    guid: 6003fcda21110514cb65aba00ba6138e
+    path: Assets/Scenes/00b Menu Preload.unity
+    guid: b77075a99839ffe4392d95bce1935356
   - enabled: 1
     path: Assets/Scenes/01a Main Menu.unity
     guid: 37e3e6ef0d4dc934c9c592291d731bec
